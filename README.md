@@ -34,6 +34,41 @@ mvn spring-boot:run
 5. O con un editor moderno como vsCode o Intellij abrir la carpeta del proyecto y correr la aplicación desde ahí. (opcional)
 6. La aplicación debería estar corriendo en `http://localhost:8080`.
 
+## Estructura del proyecto
+
+```shell
+movies/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── software_colombia/
+│   │   │           └── movies/
+│   │   │               ├── model/
+│   │   │               │   └── Movie.java
+│   │   │               ├── repository/
+│   │   │               │   └── MovieRepository.java
+│   │   │               ├── service/
+│   │   │               │   ├── MovieService.java
+│   │   │               │   └── impl/
+│   │   │               │       └── MovieServiceImpl.java
+│   │   │               └── MoviesApplication.java
+│   │   └── resources/
+│   │       └── application.properties
+│   └── test/
+│       └── java/
+│           └── com/
+│               └── software_colombia/
+│                   └── movies/
+│                       ├── service/
+│                       │   ├── MovieServiceTest.java
+│                       │   └── impl/
+│                       │       └── MovieServiceImplTest.java
+│                       └── MoviesApplicationTests.java
+├── pom.xml
+└── ... (otros archivos)
+```
+
 ## Endpoints disponibles
 - `GET /api/movies/{id}`: Obtener una película por ID.
 - `GET /api/movies`: Listar películas con opciones de orden y cantidad.
