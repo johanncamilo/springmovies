@@ -1,0 +1,22 @@
+# Requests for Movie API 
+
+# 1. Obtener una película por ID:
+GET http://localhost:8080/api/movies/7
+
+###
+# 2. Lista las películas ordenadas alfabéticamente usando las variables de consulta `order` y `total`.
+GET http://localhost:8080/api/movies?total=15&order=desc
+
+###
+
+# 3. Agregar una película:
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+
+{
+  "film": "Alien the 8th Passenger",
+  "genre": "Science Fiction",
+  "studio": "20th Century Fox",
+  "score": 8.5,
+  "year": 1979
+}
